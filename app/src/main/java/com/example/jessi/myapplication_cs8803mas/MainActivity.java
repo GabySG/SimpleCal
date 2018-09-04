@@ -104,13 +104,13 @@ public class MainActivity extends AppCompatActivity {
         String password= mPasswordField.getText().toString();
 
         if(TextUtils.isEmpty(email)||TextUtils.isEmpty(password)) {
-                Toast.makeText(MainActivity.this,"Fields are empty", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this,"Fields are empty.", Toast.LENGTH_LONG).show();
         } else {
             mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if(task.isSuccessful()){
-                        Toast.makeText(MainActivity.this,"Sign in Problem", Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this,"Sign in Problem.", Toast.LENGTH_LONG).show();
                     }
                 }
             });
